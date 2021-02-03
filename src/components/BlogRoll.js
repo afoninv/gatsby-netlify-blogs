@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import adam from '../img/authors/adam.png'
+
 
 class BlogRoll extends React.Component {
   render() {
@@ -9,12 +11,12 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="blogpost__list is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`blog-list-item tile is-child ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
@@ -31,24 +33,28 @@ class BlogRoll extends React.Component {
                   ) : null}
                   <p className="post-meta">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="blogpost__title has-text-primary is-block"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
+
                   </p>
                 </header>
-                <p>
+                <p className='blogpost__description'>
                   {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
+                </p>
+
+                <p className='blogpost__author'>
+                  <img src={adam} className=' blogpost__author-image'/>
+                  <div>
+                    <span className="is-block blogpost__author-name">
+                      Adam Yates
+                    </span>
+                    <span className="is-block blogpost__date">
+                      {post.frontmatter.date}
+                    </span>
+                  </div>
                 </p>
               </article>
             </div>
