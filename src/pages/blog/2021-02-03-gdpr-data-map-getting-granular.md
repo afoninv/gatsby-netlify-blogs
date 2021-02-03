@@ -11,4 +11,4 @@ tags:
 ---
 ![](/img/image.png)
 
-Body
+This is the fourth article in a series of four on how you can create a data map (data inventory) for your organisation.
