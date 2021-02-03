@@ -1,2 +1,3 @@
+/blog        /blog
 /blog/*      /blog/:splat
 /*           https://www.soveren.io/:splat            200!
