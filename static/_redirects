@@ -1,5 +1,5 @@
-/img/*       /img/*
-/static/*    /static/*
-/blog        /blog
-/blog/*      /blog/:splat
-/*           https://www.soveren.io/:splat            200!
+/                   https://www.soveren.io                  200!
+/get-in-touch       https://www.soveren.io/get-in-touch     200!
+/company            https://www.soveren.io/company          200!
+/pricing            https://www.soveren.io/pricing          200!
+/*                  /:splat
