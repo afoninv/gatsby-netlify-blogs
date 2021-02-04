@@ -44,17 +44,17 @@ class BlogRoll extends React.Component {
                   {post.excerpt}
                 </p>
 
-                <p className='blogpost__author'>
-                  <img src={post.fields.author.frontmatter.photo.childImageSharp.fluid.src} className='blogpost__author-image'/>
+                <div className='blogpost__author'>
+                  <img alt={post.frontmatter.author} src={post.fields.author.frontmatter.photo.childImageSharp.fluid.src} className='blogpost__author-image'/>
                   <div>
                     <span className="is-block blogpost__author-name">
-                      Adam Yates
+                      {post.frontmatter.author}
                     </span>
                     <span className="is-block blogpost__date">
                       {post.frontmatter.date}
                     </span>
                   </div>
-                </p>
+                </div>
               </article>
             </div>
           ))}
