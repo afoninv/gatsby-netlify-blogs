@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import adam from '../img/authors/adam.png'
 
 
 class BlogRoll extends React.Component {
@@ -46,7 +45,7 @@ class BlogRoll extends React.Component {
                 </p>
 
                 <p className='blogpost__author'>
-                  <img src={adam} className=' blogpost__author-image'/>
+                  {/*<img src={adam} className=' blogpost__author-image'/>*/}
                   <div>
                     <span className="is-block blogpost__author-name">
                       Adam Yates
