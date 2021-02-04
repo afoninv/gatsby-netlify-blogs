@@ -85,3 +85,27 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.sourceNodes = ({ actions, getNodes, getNode }) => {
+  const {createNodeField} = actions
+
+  const markdownNodes = getNodes()
+    .filter(node => node.internal.type === `MarkdownRemark`)
+    .forEach(node => {
+      if (node.frontmatter.author) {
+        const authorNode = getNodes().find(
+          node2 =>
+            node2.internal.type === `MarkdownRemark` &&
+            node2.frontmatter.name === node.frontmatter.author
+        )
+
+        if (authorNode) {
+          createNodeField({
+            node,
+            name: 'author',
+            value: authorNode.id,
+          })
+        }
+      }
+    })
+}

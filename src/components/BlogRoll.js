@@ -45,7 +45,7 @@ class BlogRoll extends React.Component {
                 </p>
 
                 <p className='blogpost__author'>
-                  {/*<img src={adam} className=' blogpost__author-image'/>*/}
+                  <img src={post.fields.author.frontmatter.photo.childImageSharp.fluid.src} className='blogpost__author-image'/>
                   <div>
                     <span className="is-block blogpost__author-name">
                       Adam Yates
@@ -86,6 +86,17 @@ export default () => (
               id
               fields {
                 slug
+                author {
+                  frontmatter {
+                    photo {
+                      childImageSharp {
+                        fluid(maxWidth: 120, quality: 100) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
+                  }
+                }
               }
               frontmatter {
                 title
