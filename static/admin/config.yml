@@ -19,10 +19,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "authors-page"}
-      - {label: "Template", name: "template", widget: "text", default: "authors"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Photo", name: "photo", widget: image}
-      - {label: "Template Bolt", name: "bolt", widget: "text", default: "bolt"}
 
 
   - name: "blog"
