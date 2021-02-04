@@ -1,5 +1,14 @@
-/                   https://www.soveren.io                  200!
-/get-in-touch       https://www.soveren.io/get-in-touch     200!
-/company            https://www.soveren.io/company          200!
-/pricing            https://www.soveren.io/pricing          200!
-/*                  /:splat
+/                           https://www.soveren.io                          200!
+/vision                     https://www.soveren.io/vision                   200!
+/company                    https://www.soveren.io/company                  200!
+/pricing                    https://www.soveren.io/pricing                  200!
+/sign-up                    https://www.soveren.io/sign-up                  200!
+/get-in-touch               https://www.soveren.io/get-in-touch             200!
+/success-sign-up            https://www.soveren.io/success-sign-up          200!
+/success-get-in-touch       https://www.soveren.io/success-get-in-touch     200!
+/gated-content-page         https://www.soveren.io/gated-content-page       200!
+/privacy-center             https://www.soveren.io/privacy-center           200!
+/privacy-center/*           https://www.soveren.io/privacy-center/:splat    200!
+/privacy-policy             https://www.soveren.io/privacy-policy           200!
+/cookie-policy              https://www.soveren.io/cookie-policy            200!
+/*                          /:splat
