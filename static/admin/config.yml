@@ -35,7 +35,7 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Author", name: "author", widget: "relation", collection: "authors", searchFields: ["name"], valueField: "name", displayFields: ["name"], required: true}
+      - {label: "Author", name: "author", widget: "relation", collection: "authors", searchFields: ["name"], valueField: {name: "name", photo: "photo"}, displayFields: ["name"], required: true}
   - name: "pages"
     label: "Pages"
     files:
