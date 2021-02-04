@@ -78,6 +78,7 @@ export default () => (
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          # filter: { frontmatter: { templateKey: {regex: "/(blog-post|authors-page)/"  } } }
         ) {
           edges {
             node {
@@ -98,7 +99,9 @@ export default () => (
                     }
                   }
                 }
+                author
               }
+              
             }
           }
         }
