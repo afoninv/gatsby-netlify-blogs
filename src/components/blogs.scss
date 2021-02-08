@@ -34,6 +34,16 @@
      display: flex;
      flex-direction: column;
      align-items: center;
+     width: 650px;
+     margin: 0 auto;
+   }
+
+   &__item {
+     margin-bottom: 80px;
+
+     &:last-child {
+       margin-bottom: 0;
+     }
    }
 
    &__title {
@@ -55,6 +65,13 @@
 
      margin-bottom: 32px;
   }
+
+   &__image {
+     border: 1px solid #E5E9EF;
+     box-sizing: border-box;
+     border-radius: 6px;
+   }
+
    &__author {
      display: flex;
      align-items: center;

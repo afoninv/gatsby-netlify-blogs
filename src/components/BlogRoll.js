@@ -13,15 +13,10 @@ class BlogRoll extends React.Component {
       <div className="blogpost__list is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
+            <article key={post.id} className='blogpost__item'>
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className='blogpost__image'>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -41,7 +36,7 @@ class BlogRoll extends React.Component {
                   </p>
                 </header>
                 <p className='blogpost__description'>
-                  {post.excerpt}
+                  {post.frontmatter.description}
                 </p>
 
                 <div className='blogpost__author'>
@@ -56,7 +51,6 @@ class BlogRoll extends React.Component {
                   </div>
                 </div>
               </article>
-            </div>
           ))}
       </div>
     )
@@ -100,6 +94,7 @@ export default () => (
               }
               frontmatter {
                 title
+                description
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
