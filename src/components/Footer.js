@@ -16,9 +16,7 @@ const Footer = class extends React.Component {
             className="logo"
             srcSet
           />
-          <div className="body medium-s">
-            Automating data privacy requests
-          </div>
+          <div className="body medium-s">Automating data privacy requests</div>
           <div className="body medium-s gray">
             Self-setup in minutes. Reduce compliance costs. Respond in full, in
             time.
@@ -35,13 +33,13 @@ const Footer = class extends React.Component {
         <div className="footer-right">
           <div className="product-column-footer">
             <div className="footer-column-name">Product</div>
-            <Link to="/#auto-request-processing" className="footer-link">
+            <Link to="#auto-request-processing" className="footer-link">
               Auto request processing
             </Link>
-            <Link to="/#data-inventory" className="footer-link">
+            <Link to="#data-inventory" className="footer-link">
               Data inventory
             </Link>
-            <Link to="/#privacy-portal" className="footer-link">
+            <Link to="#privacy-portal" className="footer-link">
               Consumer privacy portal
             </Link>
             <Link to="/pricing" className="footer-link">
@@ -60,7 +58,7 @@ const Footer = class extends React.Component {
               Careers
             </Link>
             <div className="footer-link-badge">
-              <Link to="/#First-name-3" className="footer-link">
+              <Link to="#First-name-3" className="footer-link">
                 Careers
               </Link>
               <div className="badge">
@@ -77,25 +75,13 @@ const Footer = class extends React.Component {
             >
               Privacy portal
             </Link>
-            <Link
-              to="/privacy-policy"
-              target="_blank"
-              className="footer-link"
-            >
+            <Link to="/privacy-policy" target="_blank" className="footer-link">
               Privacy policy
             </Link>
-            <Link
-              to="/cookie-policy"
-              target="_blank"
-              className="footer-link"
-            >
+            <Link to="/cookie-policy" target="_blank" className="footer-link">
               Cookie policy
             </Link>
-            <a
-              href={TermsOfUse}
-              target="_blank"
-              className="footer-link"
-            >
+            <a href={TermsOfUse} target="_blank" className="footer-link">
               Terms of use
             </a>
             <div className="footer-link-badge">
