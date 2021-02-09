@@ -1,15 +1,15 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from "react";
+import { Link } from "gatsby";
+import Logo_Soveren from "../img/Logo_Soveren.svg";
+import ArrowRightBold_outlined from "../img/Arrow-Right-bold_outlined.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
-      navBarActiveClass: '',
-    }
+      navBarActiveClass: "",
+    };
   }
 
   toggleHamburger = () => {
@@ -23,76 +23,115 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: '',
-            })
+              navBarActiveClass: "",
+            });
       }
-    )
-  }
+    );
+  };
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
+      <div
+        data-animation="over-right"
+        className="navbar w-nav"
+        data-easing2="ease-out-quad"
+        data-easing="ease-out-quad"
+        data-collapse="small"
+        role="banner"
+        data-no-scroll="{1}"
+        data-duration="{400}"
+        data-doc-height="{1}"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+        <div className="navigation-items wrapper-main">
+          <div id="w-node-e92c939ac5fc-1b74456c" className="nav-left">
+            <Link
+              to="/"
+              aria-current="page"
+              className="logo-block w-nav-brand w--current"
             >
-              <span />
-              <span />
-              <span />
+              <img
+                src={Logo_Soveren}
+                alt="Soveren logo"
+                className="logo"
+                srcSet
+              />
+            </Link>
+          </div>
+          <div id="w-node-2b83cd00e13c-1b74456c" className="nav-right">
+            <div className="transparant-menu-button w-nav-button">
+              <div className="menu-icon-line-top" />
+              <div className="menu-icon-line-middle" />
+              <div className="menu-icon-line-bottom" />
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+          <nav
+            role="navigation"
+            id="w-node-f923089a7d17-1b74456c"
+            className="nav-menu w-nav-menu"
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    )
-  }
-}
+            <Link
+              id="seo-company-button-header"
+              to="/company"
+              className="button-tertiary w-button"
+            >
+              Company
+            </Link>
+            <Link
+              id="seo-pricing-button-header"
+              to="/pricing"
+              className="button-tertiary last w-button"
+            >
+              Pricing
+            </Link>
+            <Link
+              id="seo-get-in-touch-button-header"
+              to="/get-in-touch"
+              className="button-secondary w-button"
+            >
+              Get in touch
+            </Link>
+            <Link
+              id="seo-try-for-free-button-header"
+              to="/sign-up"
+              className="button-primary w-inline-block"
+            >
+              <div className="button-text">Try for free</div>
+              <img
+                src={ArrowRightBold_outlined}
+                loading="lazy"
+                alt
+                className="icon-button"
+                srcSet
+              />
+            </Link>
+            <div className="footer-mobile">
+              <div className="link-wrapper-menu">
+                <a
+                  href="../documents/Soveren_Privacy_Policy_20102020.pdf"
+                  target="_blank"
+                  className="link-button secondary"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="../documents/Soveren_Website_Terms_of_Use_20102020.pdf"
+                  target="_blank"
+                  className="link-button secondary"
+                >
+                  Terms of use
+                </a>
+              </div>
 
-export default Navbar
+              <div className="copyright">© Copyright 2020 — Soveren, Inc.</div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    );
+  }
+};
+
+export default Navbar;

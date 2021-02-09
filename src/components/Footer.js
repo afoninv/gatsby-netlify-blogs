@@ -1,115 +1,135 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
 
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+import Logo_Soveren from "../img/Logo_Soveren.svg";
+import TermsOfUse from "../documents/Soveren_Website_Terms_of_Use_20102020.pdf";
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+      <div id="seo-contact-us-button-footer" className="footer-main">
+        <div className="footer-left">
           <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
+            src={Logo_Soveren}
+            loading="lazy"
+            alt="Soveren logo"
+            className="logo"
+            srcSet
           />
+          <div className="body medium-s">
+            Automating data privacy requests
+          </div>
+          <div className="body medium-s gray">
+            Self-setup in minutes. Reduce compliance costs. Respond in full, in
+            time.
+          </div>
+
+          <Link
+            id="seo-get-in-touch-button-footer"
+            to="/get-in-touch"
+            className="button-secondary w-button"
+          >
+            Get in touch
+          </Link>
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
+        <div className="footer-right">
+          <div className="product-column-footer">
+            <div className="footer-column-name">Product</div>
+            <Link to="/#auto-request-processing" className="footer-link">
+              Auto request processing
+            </Link>
+            <Link to="/#data-inventory" className="footer-link">
+              Data inventory
+            </Link>
+            <Link to="/#privacy-portal" className="footer-link">
+              Consumer privacy portal
+            </Link>
+            <Link to="/pricing" className="footer-link">
+              Pricing
+            </Link>
+          </div>
+          <div className="product-column-footer">
+            <div className="footer-column-name">Company</div>
+            <Link to="/vision" className="footer-link">
+              Privacy vision
+            </Link>
+            <Link
+              to="https://soveren.io/company#careers"
+              className="footer-link"
+            >
+              Careers
+            </Link>
+            <div className="footer-link-badge">
+              <Link to="/#First-name-3" className="footer-link">
+                Careers
+              </Link>
+              <div className="badge">
+                <div>we're hiring!</div>
               </div>
             </div>
           </div>
+          <div className="product-column-footer">
+            <div className="footer-column-name">terms</div>
+            <Link
+              to="/privacy-center/main"
+              target="_blank"
+              className="footer-link"
+            >
+              Privacy portal
+            </Link>
+            <Link
+              to="/privacy-policy"
+              target="_blank"
+              className="footer-link"
+            >
+              Privacy policy
+            </Link>
+            <Link
+              to="/cookie-policy"
+              target="_blank"
+              className="footer-link"
+            >
+              Cookie policy
+            </Link>
+            <a
+              href={TermsOfUse}
+              target="_blank"
+              className="footer-link"
+            >
+              Terms of use
+            </a>
+            <div className="footer-link-badge">
+              <Link to="#First-name-3" className="footer-link">
+                Sitemap
+              </Link>
+              <div className="badge">
+                <div>soon</div>
+              </div>
+            </div>
+            <div className="embed-policies w-embed">
+              <Link
+                to="https://www.iubenda.com/privacy-policy/57434851"
+                className="iubenda-white no-brand iubenda-embed"
+                title="Privacy Policy "
+              >
+                Privacy Policy
+              </Link>
+            </div>
+            <div className="embed-policies w-embed">
+              <Link
+                to="https://www.iubenda.com/privacy-policy/57434851/cookie-policy"
+                className="iubenda-white no-brand iubenda-embed"
+                title="Cookie Policy "
+              >
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
         </div>
-      </footer>
-    )
+        <div className="copyright small">© Copyright 2021 — Soveren, Inc.</div>
+      </div>
+    );
   }
-}
+};
 
-export default Footer
+export default Footer;
