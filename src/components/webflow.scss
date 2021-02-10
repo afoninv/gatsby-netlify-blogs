@@ -2535,16 +2535,6 @@ figcaption {
   white-space: nowrap;
 }
 
-.w-nav-overlay {
-  position: absolute;
-  overflow: hidden;
-  display: none;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
 @media screen and (max-width: 991px) {
   li {
     font-size: 13px;
@@ -3857,6 +3847,15 @@ figcaption {
     white-space: nowrap;
   }
 
+  .w-nav-overlay {
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
   .mobile-nav {
     display: block;
     width: 0;
@@ -4732,10 +4731,11 @@ figcaption {
   grid-column-start: span 1;
   grid-column-end: span 1;
   align-self: auto;
+  width: 0;
 }
 
 #w-node-f923089a7d17-1b74456c {
-  justify-content: start;
+  justify-content: flex-end;
   align-items: initial;
 }
 
@@ -4855,6 +4855,14 @@ figcaption {
 
   #w-node-ed3ed3f23dcf-93ed4de8 {
     align-self: start;
+  }
+
+  #w-node-f923089a7d17-1b74456c {
+    justify-content: start;
+  }
+
+  #w-node-2b83cd00e13c-1b74456c {
+    width: auto;
   }
 }
 
