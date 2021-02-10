@@ -51,10 +51,29 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132991362-10" />
+        <script src={`${withPrefix("/")}js/gtm.js`} />
+
+
       </Helmet>
       <Navbar />
       <div>{children}</div>
       <Footer />
+
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-W7C2KQB"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"/>
+      </noscript>
+
+      <Helmet>
+        <script src={`${withPrefix("/")}js/iubenda.js`} />
+        <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charSet="UTF-8" async />
+      </Helmet>
     </div>
   );
 };
