@@ -91,15 +91,6 @@ p {
   margin-bottom: 15px;
 }
 
-a {
-  color: #1f6fff;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #000;
-}
-
 li {
   margin-bottom: -3px;
   padding-left: 8px;
@@ -2544,6 +2535,16 @@ figcaption {
   white-space: nowrap;
 }
 
+.w-nav-overlay {
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
 @media screen and (max-width: 991px) {
   li {
     font-size: 13px;
@@ -3855,6 +3856,21 @@ figcaption {
   .text-span-42 {
     white-space: nowrap;
   }
+
+  .mobile-nav {
+    display: block;
+    width: 0;
+    height: 100vh;
+
+    left: auto;
+    top: 0;
+
+    transition: width 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  }
+
+  .mobile-nav.is-active {
+    width: 320px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -4719,7 +4735,8 @@ figcaption {
 }
 
 #w-node-f923089a7d17-1b74456c {
-  align-self: auto;
+  justify-content: start;
+  align-items: initial;
 }
 
 #w-node-7c401176f026-7a065972 {

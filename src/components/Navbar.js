@@ -9,6 +9,7 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: "",
+      hamburgerClass: "",
     };
   }
 
@@ -24,9 +25,11 @@ const Navbar = class extends React.Component {
         this.state.active
           ? this.setState({
               navBarActiveClass: "is-active",
+              hamburgerClass: "w--open",
             })
           : this.setState({
               navBarActiveClass: "",
+              hamburgerClass: "",
             });
       }
     );
@@ -61,73 +64,80 @@ const Navbar = class extends React.Component {
             </Link>
           </div>
           <div id="w-node-2b83cd00e13c-1b74456c" className="nav-right">
-            <div className="transparant-menu-button w-nav-button">
+            <div
+              className={`transparant-menu-button w-nav-button ${this.state.hamburgerClass}`}
+              data-target="navMenu"
+              onClick={() => this.toggleHamburger()}
+            >
               <div className="menu-icon-line-top" />
               <div className="menu-icon-line-middle" />
               <div className="menu-icon-line-bottom" />
             </div>
-          </div>
-          <nav
-            role="navigation"
-            id="w-node-f923089a7d17-1b74456c"
-            className="nav-menu w-nav-menu"
-          >
-            <Link
-              id="seo-company-button-header"
-              to="/company"
-              className="button-tertiary w-button"
-            >
-              Company
-            </Link>
-            <Link
-              id="seo-pricing-button-header"
-              to="/pricing"
-              className="button-tertiary last w-button"
-            >
-              Pricing
-            </Link>
-            <Link
-              id="seo-get-in-touch-button-header"
-              to="/get-in-touch"
-              className="button-secondary w-button"
-            >
-              Get in touch
-            </Link>
-            <Link
-              id="seo-try-for-free-button-header"
-              to="/sign-up"
-              className="button-primary w-inline-block"
-            >
-              <div className="button-text">Try for free</div>
-              <img
-                src={ArrowRightBold_outlined}
-                loading="lazy"
-                alt
-                className="icon-button"
-                srcSet
-              />
-            </Link>
-            <div className="footer-mobile">
-              <div className="link-wrapper-menu">
-                <a
-                  href="../documents/Soveren_Privacy_Policy_20102020.pdf"
-                  target="_blank"
-                  className="link-button secondary"
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="../documents/Soveren_Website_Terms_of_Use_20102020.pdf"
-                  target="_blank"
-                  className="link-button secondary"
-                >
-                  Terms of use
-                </a>
-              </div>
 
-              <div className="copyright">© Copyright 2020 — Soveren, Inc.</div>
+            <div className={`w-nav-overlay mobile-nav ${this.state.navBarActiveClass}`} data-wf-ignore="" id="w-nav-overlay-0">
+              <nav
+                role="navigation"
+                id="w-node-f923089a7d17-1b74456c"
+                className="nav-menu w-nav-menu"
+              >
+                <Link
+                  id="seo-company-button-header"
+                  to="/company"
+                  className="button-tertiary w-button"
+                >
+                  Company
+                </Link>
+                <Link
+                  id="seo-pricing-button-header"
+                  to="/pricing"
+                  className="button-tertiary last w-button"
+                >
+                  Pricing
+                </Link>
+                <Link
+                  id="seo-get-in-touch-button-header"
+                  to="/get-in-touch"
+                  className="button-secondary w-button"
+                >
+                  Get in touch
+                </Link>
+                <Link
+                  id="seo-try-for-free-button-header"
+                  to="/sign-up"
+                  className="button-primary w-inline-block"
+                >
+                  <div className="button-text">Try for free</div>
+                  <img
+                    src={ArrowRightBold_outlined}
+                    loading="lazy"
+                    alt
+                    className="icon-button"
+                    srcSet
+                  />
+                </Link>
+                <div className="footer-mobile">
+                  <div className="link-wrapper-menu">
+                    <a
+                      href="../documents/Soveren_Privacy_Policy_20102020.pdf"
+                      target="_blank"
+                      className="link-button secondary"
+                    >
+                      Privacy Policy
+                    </a>
+                    <a
+                      href="../documents/Soveren_Website_Terms_of_Use_20102020.pdf"
+                      target="_blank"
+                      className="link-button secondary"
+                    >
+                      Terms of use
+                    </a>
+                  </div>
+
+                  <div className="copyright">© Copyright 2020 — Soveren, Inc.</div>
+                </div>
+              </nav>
             </div>
-          </nav>
+          </div>
         </div>
       </div>
     );
