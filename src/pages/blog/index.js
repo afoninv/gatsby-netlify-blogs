@@ -9,12 +9,10 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
-            <div className="content">
-              <BlogRoll />
+          <div className="content">
+            <BlogRoll />
 
-              <SubscribeFormBottom type='fullWidth' id='blogpost_hubspotForm_bottom'/>
-            </div>
+            <SubscribeFormBottom type='fullWidth' id='blogpost_hubspotForm_bottom'/>
           </div>
         </section>
       </Layout>

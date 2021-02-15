@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import SubscribeFormBottom from "../components/forms/subscribeFormBottom";
 
 export const BlogPostTemplate = ({
   content,
@@ -19,27 +20,29 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section className="section ">
       {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+      <div className="content">
+        <div className="blog">
+          <div className='blogpost'>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
             <p>{description}</p>
+          </div>
 
-            {featuredimage ? (
-              <div className='blogpost__image'>
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: featuredimage,
-                    alt: `featured image thumbnail for post ${title}`,
-                  }}
-                />
-              </div>
-            ) : null}
+          {featuredimage ? (
+            <div className='blogpost__image'>
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: featuredimage,
+                  alt: `featured image thumbnail for post ${title}`,
+                }}
+              />
+            </div>
+          ) : null}
 
+          <div className="blogpost">
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -54,8 +57,11 @@ export const BlogPostTemplate = ({
               </div>
             ) : null}
           </div>
+
         </div>
       </div>
+
+      <SubscribeFormBottom type='fullWidth' id='blogpost_hubspotForm_bottom'/>
     </section>
   );
 };

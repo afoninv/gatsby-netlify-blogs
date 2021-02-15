@@ -120,3 +120,15 @@
      color: #8690A5;
    }
  }
+
+ .blog {
+   display: flex;
+   flex-direction: column;
+
+   h1 {
+     font-weight: bold;
+     font-size: 42px!important;
+     line-height: 48px!important;
+     color: #292929;
+   }
+ }
