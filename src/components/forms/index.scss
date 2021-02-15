@@ -11,21 +11,37 @@
     border-radius: 12px;
     padding: 32px 54px;
 
-    width: calc(100% + 2 * 86px );
+    width: 822px;
+  }
+
+  &_fullWidth {
+    width: 100%;
+    max-width: 1234px;
+    margin: 0 auto;
   }
 
   &__hubspot {
     flex-shrink: 1;
     width: 324px;
+    position: relative;
 
     .subscribeForm_background & {
       width: 426px;
+    }
+
+    .subscribeForm_fullWidth & {
+      flex-grow: 1;
+      margin-left: 72px;
     }
   }
 
   &__description {
     display: flex;
     flex-direction: column;
+
+    .subscribeForm_fullWidth & {
+      width: 280px;
+    }
   }
 
   &__header,
@@ -40,6 +56,19 @@
   }
 
   &__subheader {
+    color: #8690A5;
+  }
+
+  &__inputDescription {
+    position: absolute;
+    top: 44px;
+    left: 20px;
+
+    font-family: Inter;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
     color: #8690A5;
   }
 }

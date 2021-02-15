@@ -2,6 +2,8 @@ import React from "react";
 
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
+import MappingTemplate from "../../components/MappingTemplate";
+import SubscribeFormBottom from "../../components/forms/subscribeFormBottom";
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -29,6 +31,10 @@ export default class BlogIndexPage extends React.Component {
           <div className="container">
             <div className="content">
               <BlogRoll />
+
+              <MappingTemplate />
+
+              <SubscribeFormBottom type='fullWidth' id='blogpost_hubspotForm_bottom'/>
             </div>
           </div>
         </section>

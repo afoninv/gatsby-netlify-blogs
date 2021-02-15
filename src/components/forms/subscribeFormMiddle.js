@@ -2,7 +2,7 @@ import React from 'react';
 import HubspotForm from "./HubspotForm";
 import './index.scss';
 
-const SubscribeFormTop = (props) => {
+const SubscribeFormMiddle = (props) => {
   const decorationClass = props.type ? `subscribeForm_${props.type}` : ''
   return (
     <div className={`subscribeForm ${decorationClass}`}>
@@ -19,4 +19,4 @@ const SubscribeFormTop = (props) => {
 }
 
 
-export default SubscribeFormTop;
+export default SubscribeFormMiddle;
