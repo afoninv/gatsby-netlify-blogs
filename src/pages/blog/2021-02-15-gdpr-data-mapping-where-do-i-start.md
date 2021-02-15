@@ -9,6 +9,8 @@ description: "GDPR data mapping can be a tricky exercise and it is difficult to
   need to define which categories of data you hold.)"
 featuredimage: /img/data-mapping-template-download.png
 author: Adam
+tags:
+- test
 ---
 ## GDPR data mapping: why bother?
 

@@ -1,0 +1,45 @@
+.subscribeForm {
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  justify-content: space-between;
+
+  width: 100%;
+
+  &_background {
+    background: #F5F7F9;
+    border-radius: 12px;
+    padding: 32px 54px;
+
+    width: calc(100% + 2 * 86px );
+  }
+
+  &__hubspot {
+    flex-shrink: 1;
+    width: 324px;
+
+    .subscribeForm_background & {
+      width: 426px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header,
+  &__subheader {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__header {
+    color: #1D293F;
+  }
+
+  &__subheader {
+    color: #8690A5;
+  }
+}

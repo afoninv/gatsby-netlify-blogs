@@ -55,7 +55,10 @@ const TemplateWrapper = ({ children }) => {
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132991362-10" />
         <script src={`${withPrefix("/")}js/gtm.js`} />
 
+        <script src={`${withPrefix("/")}js/iubenda.js`} />
+        <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charSet="UTF-8" async />
 
+        <script charSet="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js" async />
       </Helmet>
       <Navbar />
       <div>{children}</div>
@@ -69,13 +72,9 @@ const TemplateWrapper = ({ children }) => {
           width="0"
           style={{display: "none", visibility: "hidden"}}/>
       </noscript>
-
-      <Helmet>
-        <script src={`${withPrefix("/")}js/iubenda.js`} />
-        <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charSet="UTF-8" async />
-      </Helmet>
     </div>
   );
 };
 
 export default TemplateWrapper;
+
