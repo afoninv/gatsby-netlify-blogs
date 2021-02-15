@@ -47,19 +47,13 @@ Below are some possible categories of personal data that you could use in your G
 
 When defining your categories, it is important to bear in mind what personal data is defined as under the GDPR:
 
-> “‘personal data’ means any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier”
+> personal data’ means any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier
 
 The word identifiable carries importance here. For example, is a person’s date of birth personal data?
 
-
-
 Answer: it depends.
 
-
-
 If you are holding other data points which together with the person’s date of birth can be used to identify them (for example, address), then the date of birth is classified as personal data. You probably hold several data points which allow you to identify the customer.
-
-
 
 Anyway, now that we understand the nuances of the legislation a little better, let’s take a look at the different categories in more detail.
 
@@ -87,7 +81,16 @@ If you work in an online business that processes your customers data, you probab
 
 Special category data is personal data that requires additional protection by law. This is because these data are especially sensitive to the individual. This category includes things like data about a person’s health, any religious beliefs they hold, their sexual orientation, and other sensitive information.
 
-Assess data usage
+<div class="mappingTemplate">
+
+<div class="mappingTemplate__header">Free data mappping template</div>
+
+<div class="mappingTemplate__description">Save time and effort by downloading Soveren’s  
+free GDPR data mapping template.</div>
+
+[Download now](/data-mappinig-template)</div>
+
+## Assess data usage
 
 Now that we understand how to subcategorize the personal data you hold, it is important to assess how you use the data, i.e. what is the purpose for why you hold these data. For each subcategory, indicate whether you hold personal data for the purpose of:
 
@@ -105,7 +108,7 @@ This is a really important and useful exercise as you can see what categories of
 
 A important principle of the GDPR is noted in Article 5, 1(c) of the regulation, which mandates that collection of personal data should be:
 
-> “adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed (‘data minimization’)”
+> adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed (‘data minimization’)
 
 Using your data map to see exactly what data you hold and why you hold it, you can see which data that you have collected and don’t use: data which you can erase from your systems.
 
