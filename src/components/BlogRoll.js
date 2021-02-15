@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import MappingTemplate from "./MappingTemplate";
 
 class BlogRoll extends React.Component {
   render() {
@@ -9,7 +10,10 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="blogpost__list is-multiline">
+      <div className="blogpost is-multiline">
+        <h1 className='h1 wrapper-main'>Blog</h1>
+
+        <div className="blogpost__list is-multiline">
         {posts &&
         posts.map(({ node: post }) => (
           <article key={post.id} className='blogpost__item'>
@@ -51,6 +55,9 @@ class BlogRoll extends React.Component {
             </div>
           </article>
         ))}
+        </div>
+
+        <MappingTemplate />
       </div>
     )
   }

@@ -15,15 +15,35 @@
   }
 
   &_fullWidth {
-    width: 100%;
-    max-width: 1234px;
-    margin: 0 auto;
+    min-height: 130px;
+    padding: 0;
+    align-items: center;
+
+    @media screen and (max-width: 991px) {
+      align-items: start;
+      height: auto;
+      padding: 24px 16px 30px;
+    }
+
+    @media screen and (max-width: 479px) {
+      overflow: hidden;
+      padding-top: 16px;
+      padding-bottom: 46px;
+      text-align: left;
+
+      width: 100%;
+      flex-direction: column;
+    }
   }
 
   &__hubspot {
     flex-shrink: 1;
     width: 324px;
     position: relative;
+
+    @media screen and (max-width: 991px) {
+      width: 460px;
+    }
 
     .subscribeForm_background & {
       width: 426px;
@@ -32,6 +52,20 @@
     .subscribeForm_fullWidth & {
       flex-grow: 1;
       margin-left: 72px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .subscribeForm_fullWidth & {
+        margin-left: 36px;
+        min-width: 67%;
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      .subscribeForm_fullWidth & {
+        margin: 16px 0 0 0;
+        width: 100%;
+      }
     }
   }
 
@@ -42,6 +76,13 @@
     .subscribeForm_fullWidth & {
       width: 280px;
     }
+
+    @media screen and (max-width: 479px) {
+      .subscribeForm_fullWidth & {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &__header,
@@ -49,6 +90,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 8px;
+    }
   }
 
   &__header {
@@ -61,14 +106,18 @@
 
   &__inputDescription {
     position: absolute;
-    top: 44px;
+    top: 52px;
     left: 20px;
 
     font-family: Inter;
     font-size: 10px;
     line-height: 12px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     color: #8690A5;
+
+    @media screen and (max-width: 479px) {
+      left: 0;
+    }
   }
 }

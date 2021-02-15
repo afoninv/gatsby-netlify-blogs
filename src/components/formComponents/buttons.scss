@@ -23,6 +23,15 @@
     padding: 0 36px;
   }
 
+  &_huge {
+    height: 48px;
+    padding: 0 36px;
+
+    @media screen and (max-width: 767px) {
+      padding: 0 14px;
+    }
+  }
+
   &_small {
     padding: 0 20px;
   }

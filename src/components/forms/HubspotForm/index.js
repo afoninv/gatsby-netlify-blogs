@@ -21,9 +21,9 @@ const typesList = {
   },
   updatesBottom: {
     portalId: "8941784",
-    formId: "2c06fceb-1609-40b4-a381-5b5f53d0d770",
+    formId: "02dbe62e-0a4e-4c2a-8974-0061aaadcb02",
     cssClass: 'hubspotForm',
-    submitButtonClass: 'button button_big',
+    submitButtonClass: 'button button_huge',
     errorClass: 'hubspotForm__error',
     errorMessageClass: 'hubspotForm__errorMessage',
   }

@@ -2,6 +2,23 @@
   width: 100%;
 }
 
+.content h1 {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -1px;
+  color: #232C40;
+
+  padding: 0;
+  margin: 0 0 80px;
+
+  @media screen and (max-width: 479px) {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 32px;
+  }
+}
+
 .w-form-formrecaptcha {
   margin-bottom: 8px;
 }
@@ -180,7 +197,7 @@ figcaption {
   position: relative;
   overflow: visible;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 0;
   background-color: #fff;
 }
 
@@ -858,7 +875,7 @@ figcaption {
 
 .wrapper-main {
   width: 100%;
-  max-width: 1234px;
+  max-width: 1170px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 32px;
@@ -1545,7 +1562,7 @@ figcaption {
   display: grid;
   width: 100%;
   height: auto;
-  max-width: 1234px;
+  max-width: 1170px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 52px;
@@ -1869,7 +1886,7 @@ figcaption {
 .wrapper-hiring {
   display: flex;
   width: 100%;
-  max-width: 1234px;
+  max-width: 1170px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 120px;
@@ -1950,7 +1967,7 @@ figcaption {
   display: grid;
   width: auto;
   height: 44px;
-  max-width: 1234px;
+  max-width: 1170px;
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
@@ -2018,7 +2035,7 @@ figcaption {
   display: grid;
   width: auto;
   height: 44px;
-  max-width: 1234px;
+  max-width: 1170px;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -2420,7 +2437,7 @@ figcaption {
 .subscription-form {
   display: flex;
   width: 100%;
-  max-width: 1234px;
+  max-width: 1170px;
   margin-right: auto;
   margin-bottom: 0;
   margin-left: auto;
