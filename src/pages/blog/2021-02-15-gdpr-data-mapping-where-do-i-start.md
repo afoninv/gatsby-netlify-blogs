@@ -11,6 +11,8 @@ featuredimage: /img/data-mapping-template-download.png
 author: Adam
 tags:
   - GDPR
+  - Data mapping
+  - Learn
 ---
 ## GDPR data mapping: why bother?
 
