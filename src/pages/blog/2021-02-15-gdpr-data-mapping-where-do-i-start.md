@@ -88,7 +88,11 @@ Special category data is personal data that requires additional protection by la
 <div class="mappingTemplate__description">Save time and effort by downloading Soveren’s  
 free GDPR data mapping template.</div>
 
-[Download now](/data-mappinig-template)</div>
+<span class="button button_big mappingTemplate__button">
+    [Download now](/data-mappinig-template)
+</span>
+
+</div>
 
 ## Assess data usage
 
