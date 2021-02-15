@@ -10,7 +10,7 @@ description: "GDPR data mapping can be a tricky exercise and it is difficult to
 featuredimage: /img/data-mapping-template-download.png
 author: Adam
 tags:
-- test
+  - GDPR
 ---
 ## GDPR data mapping: why bother?
 
