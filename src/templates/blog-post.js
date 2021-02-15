@@ -112,11 +112,11 @@ export const pageQuery = graphql`
         title
         description
         featuredimage {
-            childImageSharp {
-                fluid( quality: 100) {
-                    ...GatsbyImageSharpFluid
-                }
+          childImageSharp {
+            fluid( quality: 100) {
+                ...GatsbyImageSharpFluid
             }
+          }
         }
         tags
       }
