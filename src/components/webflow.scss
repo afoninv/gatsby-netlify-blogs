@@ -71,12 +71,24 @@ ul,
 .content ul {
   list-style: none;
   margin-left: 40px;
+
+  @media screen and (max-width: 479px) {
+    margin-left: 24px;
+  }
 }
 
 li,
 .content li {
   padding-left: 12px;
   position: relative;
+
+  font-size: 20px;
+  line-height: 32px;
+
+  @media screen and (max-width: 479px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &:before {
     content: ' ';
@@ -187,6 +199,11 @@ p {
   line-height: 32px;
   margin-bottom: 15px;
   color: #232C40;
+
+  @media screen and (max-width: 479px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 li {
@@ -4003,8 +4020,9 @@ figcaption {
     padding-right: 0;
     padding-left: 15px;
     border-left-width: 3px;
-    font-size: 17px;
-    line-height: 23px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 0;
   }
 
   .navbar {
