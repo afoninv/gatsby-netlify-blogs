@@ -8,9 +8,12 @@
 
   width: calc(100% + 2 * 86px );
   max-width: calc(100vw - 2 * 16px);
-  margin: 80px -86px;
 
   text-align: center;
+
+  margin: 80px 0;
+  align-items: center;
+  align-self: center;
 
   @media screen and (max-width: 479px) {
     margin: 64px 0;

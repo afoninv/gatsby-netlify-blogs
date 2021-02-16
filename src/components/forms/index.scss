@@ -17,10 +17,9 @@
   &_fullWidth {
     min-height: 130px;
     padding: 0;
-    align-items: center;
+    align-items: start;
 
     @media screen and (max-width: 991px) {
-      align-items: start;
       height: auto;
       padding: 24px 16px 30px;
     }

@@ -43,10 +43,9 @@ export const BlogPostTemplate = ({
                   </span>
               </div>
             </div>*/}
-          </div>
 
           {featuredimage ? (
-            <div className='blogpost__image'>
+            <div className='blogpost__image blogpost__image_detail'>
               <PreviewCompatibleImage
                 imageInfo={{
                   image: featuredimage,
@@ -56,18 +55,17 @@ export const BlogPostTemplate = ({
             </div>
           ) : null}
 
-          <div className="blogpost">
-            <PostContent content={content} />
+            <div className='blogpost__content'>
+              <PostContent content={content} />
+            </div>
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`} className='taglist__item'>
-                      <Link to={`/tags/${kebabCase(tag)}/`} className='taglist__link'>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="taglist">
+                {tags.map((tag) => (
+                  <li key={tag + `tag`} className='taglist__item'>
+                    <Link to={`/tags/${kebabCase(tag)}/`} className='taglist__link'>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
             ) : null}
           </div>
 
