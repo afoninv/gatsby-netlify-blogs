@@ -8,7 +8,7 @@ description: "GDPR data mapping can be a tricky exercise and it is difficult to
   Read on to learn where you should start your data map process. (Spoiler: you
   need to define which categories of data you hold.)"
 featuredimage: /img/data-mapping-template-download.png
-author: Adam Yates
+author: Soveren
 tags:
   - GDPR
   - Data mapping
@@ -25,7 +25,7 @@ An ideal tool for keeping track of all of your customer personal data is a data 
 The task of creating your GDPR data map to get an overview of your inventory can be broken down into three logical parts:
 
 * Identifying the categories of data you hold
-* Indicating the reason for why you process these data
+* Indicating the reason for why you process this data
 * Locating where you store customer personal data
 
 The remainder of this article will cover how to identify the categories so that when you start looking for and finding your customers’ personal data, you will be able to immediately assign the category which they belong to.
@@ -42,7 +42,7 @@ Below are some possible categories of personal data that you could use in your G
 * Financial
 * Identity documents
 * Employment details
-* Tracking data
+* Tracking
 * Special category
 
 When defining your categories, it is important to bear in mind what personal data is defined as under the GDPR:
@@ -59,11 +59,11 @@ Anyway, now that we understand the nuances of the legislation a little better, l
 
 ### Personal data
 
-As mentioned above, personal data is a very broad term and is defined as information that relates to an identified or identifiable individual. As such, these data could include the person’s name, address, telephone, and so on.
+As mentioned above, personal data is a very broad term and is defined as information that relates to an identified or identifiable individual. As such, this data could include the person’s name, address, telephone, and so on.
 
 ### Financial data
 
-Financial information in your data map will generally relate to any data you have collected from a customer when they have made a payment or employee payroll information. These data will generally include bank account details, such as the numbers of credit or debit cards, and could include information from credit checks.
+Financial information in your data map will generally relate to any data you have collected from a customer when they have made a payment or to employee payroll information. This data will generally include bank account details, such as the numbers of credit or debit cards, and could include information from credit checks.
 
 ### Identity documents
 
@@ -79,7 +79,7 @@ If you work in an online business that processes your customers data, you probab
 
 ### Special category data
 
-Special category data is personal data that requires additional protection by law. This is because these data are especially sensitive to the individual. This category includes things like data about a person’s health, any religious beliefs they hold, their sexual orientation, and other sensitive information.
+Special category data is personal data that requires additional protection by law. This is because this type of data is especially sensitive to the individual. This category includes things like data about a person’s health, any religious beliefs they hold, their sexual orientation, and other sensitive information.
 
 <div class="mappingTemplate">
 
@@ -89,11 +89,12 @@ Special category data is personal data that requires additional protection by la
 Save time and effort by downloading Soveren’s free GDPR data mapping template.</div>
 
 <a href="/data-mapping-template" class='button button_big mappingTemplate__button'>Download now</a>
+
 </div>
 
 ## Assess data usage
 
-Now that we understand how to subcategorize the personal data you hold, it is important to assess how you use the data, i.e. what is the purpose for why you hold these data. For each subcategory, indicate whether you hold personal data for the purpose of:
+Now that we understand how to subcategorize the personal data you hold, it is important to assess how you use the data, i.e. what is the purpose for why you hold this data. For each subcategory, indicate whether you hold personal data for the purpose of:
 
 * Accounting
 * Customer support
@@ -103,14 +104,14 @@ Now that we understand how to subcategorize the personal data you hold, it is im
 
 It is important to note that you may use the data for more than one purpose and you should note this too.
 
-This is a really important and useful exercise as you can see what categories of data you have and why you hold it. Should you have data which you cannot find or don’t know why you hold certain data, you can delete them in line with the data minimization principle of the GDPR.
+This is a really important and useful exercise as you can see what categories of data you have and why you hold them. Should you not know why you hold certain data, you can delete it in line with the data minimization principle of the GDPR.
 
 ## Data minimization
 
-A important principle of the GDPR is noted in Article 5, 1(c) of the regulation, which mandates that collection of personal data should be:
+An important principle of the GDPR is noted in Article 5, 1(c) of the regulation, which mandates that collection of personal data should be:
 
 > adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed (‘data minimization’)
 
-Using your data map to see exactly what data you hold and why you hold it, you can see which data that you have collected and don’t use: data which you can erase from your systems.
+By using your data map to see exactly what data you hold and why you hold it, you can see which data that you have collected and don’t use: data which you can erase from your systems.
 
-Now that we have defined data subcategories and the purposes for why these data are processed in your organization, you will have a better understanding of the data you need and why you need it, and the data you can erase in line with data minimization principles. This is a great starting point for creating a data map for your organization.
+Now that we have defined data subcategories and the purposes for why this data is processed in your organization, you will have a better understanding of the data you need and why you need it, and the data you can erase in line with data minimization principles. This is a great starting point for creating a data map for your organization.
