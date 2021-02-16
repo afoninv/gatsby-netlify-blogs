@@ -43,12 +43,53 @@
     &:first-child {
       margin-left: 0;
     }
+
+    &:before {
+      content: none;
+    }
   }
 
   &__link {
     color: #54617B;
   }
+}
 
+.content {
+  p {
+    & + ul {
+      margin-top: -12px;
+    }
+  }
+
+  .content p:not(:last-child),
+  .content ul:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+ul,
+.content ul {
+  list-style: none;
+  margin-left: 40px;
+}
+
+li,
+.content li {
+  padding-left: 12px;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 4px;
+    height: 4px;
+    transform: translateY(-2px);
+    border-radius: 50%;
+    background-color: currentColor
+  }
 }
 
 

@@ -26,7 +26,7 @@ export const BlogPostTemplate = ({
       {helmet || ""}
       <div className="content">
         <div className="blog">
-          <div className='blogpost'>
+          <div className='blogpost content'>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
