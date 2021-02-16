@@ -7,7 +7,7 @@ description: "GDPR data mapping can be a tricky exercise and it is difficult to
   explain how you can map data, creating a data inventory for your organization.
   Read on to learn where you should start your data map process. (Spoiler: you
   need to define which categories of data you hold.)"
-featuredimage: /img/data-mapping-template-download.png
+featuredimage: /img/data-mapping-start.png
 author: Soveren
 tags:
   - GDPR
