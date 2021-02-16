@@ -8,7 +8,7 @@ description: "GDPR data mapping can be a tricky exercise and it is difficult to
   Read on to learn where you should start your data map process. (Spoiler: you
   need to define which categories of data you hold.)"
 featuredimage: /img/data-mapping-start.png
-author: Soveren
+author: Adam Yates
 tags:
   - GDPR
   - Data mapping
