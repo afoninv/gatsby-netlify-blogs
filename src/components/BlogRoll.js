@@ -9,6 +9,8 @@ class BlogRoll extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
+    console.log('posts', posts);
+
     return (
       <div className="blogpost is-multiline">
         <h1 className='h1 wrapper-main'>Blog</h1>
@@ -112,7 +114,6 @@ export default () => (
                 }
                 author
               }
-              
             }
           }
         }

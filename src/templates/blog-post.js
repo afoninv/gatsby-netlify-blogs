@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
-import {graphql, Link, StaticQuery} from "gatsby";
+import {graphql, Link} from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
@@ -17,7 +17,8 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   author,
-  date
+  date,
+  authorImage
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -32,7 +33,7 @@ export const BlogPostTemplate = ({
             </h1>
             <p>{description}</p>
 
-            {/*<div className='blogpost__author'>
+            <div className='blogpost__author blogpost__author_detail'>
               <img alt={author} src={authorImage} className='blogpost__author-image'/>
               <div>
                   <span className="is-block blogpost__author-name">
@@ -42,7 +43,7 @@ export const BlogPostTemplate = ({
                     {date}
                   </span>
               </div>
-            </div>*/}
+            </div>
 
           {featuredimage ? (
             <div className='blogpost__image blogpost__image_detail'>
@@ -108,6 +109,7 @@ const BlogPost = ({ data }) => {
         featuredimage={post.frontmatter.featuredimage}
         author={post.frontmatter.author}
         date={post.frontmatter.date}
+        authorImage={post.fields.author.frontmatter.photo.childImageSharp.fluid.src}
       />
     </Layout>
   );
@@ -125,6 +127,20 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+        author {
+          frontmatter {
+            photo {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
