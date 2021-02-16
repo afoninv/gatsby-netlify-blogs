@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
+import {graphql, Link, StaticQuery} from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
@@ -16,6 +16,8 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  author,
+  date
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -29,6 +31,18 @@ export const BlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+
+            {/*<div className='blogpost__author'>
+              <img alt={author} src={authorImage} className='blogpost__author-image'/>
+              <div>
+                  <span className="is-block blogpost__author-name">
+                    {author}
+                  </span>
+                <span className="is-block blogpost__date">
+                    {date}
+                  </span>
+              </div>
+            </div>*/}
           </div>
 
           {featuredimage ? (
@@ -46,11 +60,10 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    <li key={tag + `tag`} className='taglist__item'>
+                      <Link to={`/tags/${kebabCase(tag)}/`} className='taglist__link'>{tag}</Link>
                     </li>
                   ))}
                 </ul>
@@ -95,6 +108,8 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         featuredimage={post.frontmatter.featuredimage}
+        author={post.frontmatter.author}
+        date={post.frontmatter.date}
       />
     </Layout>
   );
@@ -124,6 +139,8 @@ export const pageQuery = graphql`
             }
           }
         }
+        author
+        date(formatString: "MMMM DD, YYYY")
         tags
       }
     }

@@ -46,7 +46,11 @@
 
     margin-top: 20px!important;
     margin-left: 36px!important;
-    color: #eb0a1d;
+    list-style: disc;
+
+    li {
+      color: #eb0a1d;
+    }
 
     @media screen and (max-width: 767px) {
       .subscribeForm_fullWidth & {
